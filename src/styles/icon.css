@@ -7,6 +7,9 @@
   font-family: 'vant-icon', 'custom-iconfont' !important;
 }
 
-.van-icon-extra:before {
-  content: '\e626';
+.van-icon-down:before {
+  content: '\e634';
+}
+.van-icon-up:before {
+  content: '\e635';
 }

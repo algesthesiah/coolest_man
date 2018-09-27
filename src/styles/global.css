@@ -4,11 +4,10 @@
   padding: 0;
 }
 
-
 body {
   /* background-color: #fff; */
-  background-color:#F3F3F3;
-  color: rgba(0, 0, 0, .65);
+  background-color: #f3f3f3;
+  color: rgba(0, 0, 0, 0.65);
   font-size: 28px;
   font-variant: tabular-nums;
   line-height: 1.5;
@@ -16,10 +15,8 @@ body {
   height: 100%;
 }
 
-
-
 .tac {
-  text-align: center
+  text-align: center;
 }
 
 .center {
@@ -41,7 +38,7 @@ body {
 }
 
 .pd_l10 {
-  padding-left: 10px
+  padding-left: 10px;
 }
 
 .pd_20 {
@@ -72,4 +69,18 @@ body {
 .lh_50 {
   line-height: 50px;
 }
-
+.van-tabs--line .van-tabs__wrap {
+  height: 88px;
+}
+.van-tabs--line {
+  padding-top: 88px;
+}
+.van-tab {
+  line-height: 88px;
+}
+.out_txt {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
