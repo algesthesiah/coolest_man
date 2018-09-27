@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'custom-iconfont';
+  src: url('./iconfont.ttf') format('truetype');
+}
+
+.van-icon {
+  font-family: 'vant-icon', 'custom-iconfont' !important;
+}
+
+.van-icon-extra:before {
+  content: '\e626';
+}
