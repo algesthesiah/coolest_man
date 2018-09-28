@@ -55,7 +55,7 @@
         </div>
 
         <div class="account">
-          <div class="lines" @click="('banlance')">
+          <div class="lines" @click="go('banlance')">
             <i class="iconfont icon-jine"></i>
             <div class="item">余额 <span class="f_right">0.00 <i class=""> ></i></span></div>
           </div>

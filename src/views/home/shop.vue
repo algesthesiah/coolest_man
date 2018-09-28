@@ -1,28 +1,23 @@
 <template>
-  <div  class="" >
-    <div class="">
-      <h1><span> shop</span></h1>
+  <div class="zz">
+    <div class="center">
+      <van-loading type="spinner" size='50px' color="white" />
+      <div>等待开放</div>
     </div>
-    <div class="content">
-    </div>
+
   </div>
 </template>
 
 <script>
   import {
-    Button,
     Toast,
-    Tabbar,
-    TabbarItem
   } from 'vant'
   export default {
     name: 'shop',
-    components: {
-      [Button.name]: Button
-    },
     data() {
       return {
-        active: 0
+        active: 0,
+        show: true
       }
     },
     methods: {
@@ -35,4 +30,20 @@
 </script>
 
 <style scoped lang='less'>
+.zz {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.center {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -60px;
+  div {
+    color: white;
+    text-align: center;
+    margin-top: 60px;
+  }
+}
 </style>
