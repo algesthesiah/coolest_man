@@ -7,8 +7,10 @@ import App from './App';
 import router from './router';
 import './styles/global.css';
 import './styles/icon.css';
+import http from './utils/httpToken.js';
+Vue.prototype.$http = http;
 FastClick.attach(document.body);
-
+// import http from './utils/httpToken.js';
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
