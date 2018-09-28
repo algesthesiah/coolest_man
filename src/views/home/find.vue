@@ -10,16 +10,10 @@
 
 <script>
   import {
-    Button,
     Toast,
-    Tabbar,
-    TabbarItem
   } from 'vant'
   export default {
     name: 'find',
-    components: {
-      [Button.name]: Button
-    },
     data() {
       return {
         active: 0

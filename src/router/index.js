@@ -1,25 +1,53 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 Vue.use(Router);
-const home = () => import(/* webpackChunkName: "home" */ '@/views/home');
-const shop = () => import(/* webpackChunkName: "home" */ '@/views/home/shop');
-const car = () => import(/* webpackChunkName: "home" */ '@/views/home/car');
-const user = () => import(/* webpackChunkName: "home" */ '@/views/home/user');
+const home = () =>
+  import( /* webpackChunkName: "home" */ '@/views/home');
+const shop = () =>
+  import( /* webpackChunkName: "home" */ '@/views/home/shop');
+const car = () =>
+  import( /* webpackChunkName: "home" */ '@/views/home/car');
+const user = () =>
+  import( /* webpackChunkName: "home" */ '@/views/home/user');
 const category = () =>
-  import(/* webpackChunkName: "home" */ '@/views/home/category');
-const find = () => import(/* webpackChunkName: "home" */ '@/views/home/find');
+  import( /* webpackChunkName: "home" */ '@/views/home/category');
+const find = () =>
+  import( /* webpackChunkName: "home" */ '@/views/home/find');
+const special_course = () =>
+  import( /* webpackChunkName: "header" */ '@/views/header/special_course');
+const source_info = () =>
+  import( /* webpackChunkName: "header" */ '@/views/header/source_info');
+const learning_finance = () =>
+  import( /* webpackChunkName: "header" */ '@/views/header/learning_finance');
+const buy_finance = () =>
+  import( /* webpackChunkName: "header" */ '@/views/header/buy_finance');
+const video = () =>
+  import( /* webpackChunkName: "header" */ '@/views/header/video');
+const pay = () =>
+  import( /* webpackChunkName: "header" */ '@/views/header/pay');
+const noob = () =>
+  import( /* webpackChunkName: "header" */ '@/views/header/noob');
+const problem = () =>
+  import( /* webpackChunkName: "header" */ '@/views/header/problem');
+const help = () =>
+  import( /* webpackChunkName: "header" */ '@/views/header/help');
+const college_system = () =>
+  import( /* webpackChunkName: "header" */ '@/views/header/college_system');
 const search = () =>
-  import(/* webpackChunkName: "home" */ '@/views/home/search');
+  import( /* webpackChunkName: "home" */ '@/views/home/search');
+const home_header = () =>
+  import( /* webpackChunkName: "header" */ '@/views/header');
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'home',
       redirect: '/category',
       component: home,
-      children: [
-        {
+      meta: {
+        name: '首页'
+      },
+      children: [{
           path: 'shop',
           name: 'shop',
           component: shop
@@ -51,6 +79,97 @@ export default new Router({
       path: 'search',
       name: 'search',
       component: search
+    },
+
+    {
+      path: '/',
+      name: 'home_header',
+      redirect: '/special_course',
+      meta: {
+        name: '首页'
+      },
+      component: home_header,
+      children: [{
+          path: 'special_course',
+          name: 'special_course',
+          component: special_course,
+          meta: {
+            name: '专题课程'
+          },
+        },
+        {
+          path: 'source_info',
+          name: 'source_info',
+          component: source_info,
+          meta: {
+            name: '专题课程'
+          },
+        },
+        {
+          path: 'problem',
+          name: 'problem',
+          component: problem,
+          meta: {
+            name: '常见问题'
+          },
+        },
+        {
+          path: 'help',
+          name: 'help',
+          component: help,
+          meta: {
+            name: '帮助说明'
+          },
+        },
+        {
+          path: 'noob',
+          name: 'noob',
+          component: noob,
+          meta: {
+            name: '新手上路'
+          },
+        },
+        {
+          path: 'college_system',
+          name: 'college_system',
+          component: college_system,
+          meta: {
+            name: '学院体系'
+          },
+        },
+        {
+          path: 'pay',
+          name: 'pay',
+          component: pay,
+          meta: {
+            name: '立即购买'
+          },
+        },
+        {
+          path: 'learning_finance',
+          name: 'learning_finance',
+          component: learning_finance,
+          meta: {
+            name: '学习类理财'
+          },
+        },
+        {
+          path: 'buy_finance',
+          name: 'buy_finance',
+          component: buy_finance,
+          meta: {
+            name: '购买学习类理财产品'
+          },
+        },
+        {
+          path: 'video',
+          name: 'video',
+          component: video,
+          meta: {
+            name: '专题课程'
+          },
+        },
+      ]
     },
   ]
 });
